@@ -1,0 +1,12 @@
+<div *ngIf="studentList.length > 0">
+    <div *ngFor="let student of studentList">
+      <div [routerLink]="['/student', student.id]">
+        <p class="w-100">name: {{ student.name }}</p>
+        <p class="w-100">Id: {{ student.id }}</p>
+        <p class="w-100">Gender: {{ student.gender }}</p>
+        <p class="w-100">Address: {{ student.address }}</p>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <h3 *ngIf="studentList.length == 0" class="text-center">No Record</h3>
